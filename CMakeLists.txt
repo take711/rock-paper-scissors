@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.20)
 
 # プロジェクトの名前とバージョンを設定
-project(myproject VERSION 1.0.0)
+project(rockpaperscissors VERSION 1.0.0)
 
 # C++の標準をC++17に設定
 set(CMAKE_CXX_STANDARD 17)
@@ -25,6 +25,11 @@ message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 add_compile_options(-march=native -Wall -Wextra -pedantic -Wshadow)
 
 add_subdirectory(src/main_manager)
+add_executable(test
+./test/test.cpp
+)
+target_link_libraries(test something)
+
 # 1. サブディレクトリ内に"CMakeLists.txt"ファイルを用意する
 #  1.1 add_executable(<プロジェクト名> <ソースファイル>)でコンパイル対象のファイルを指定
 #
