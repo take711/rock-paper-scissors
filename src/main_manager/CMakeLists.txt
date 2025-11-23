@@ -1,8 +1,14 @@
-include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}/inc
+file(GLOB_RECURSE MANAGER_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp
 )
 
 add_executable(RockPaperScissors
-    src/main.cpp
-    src/infrastructure/players_input/src/players_input.cpp
+    ${MANAGER_SOURCES}
+)
+message(STATUS "MANAGER_SOURCES: ${MANAGER_SOURCES}")
+
+target_include_directories(RockPaperScissors PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/inc
+    ${CMAKE_CURRENT_SOURCE_DIR}/inc/domain
+    ${CMAKE_CURRENT_SOURCE_DIR}/inc/infrastructure
 )

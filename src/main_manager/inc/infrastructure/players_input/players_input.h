@@ -1,8 +1,14 @@
 #ifndef MAIN_MANAGER_INFRASTRUCTURE_PLAYERS_INPUT_INC_PLAYERS_INPUT_H
 #define MAIN_MANAGER_INFRASTRUCTURE_PLAYERS_INPUT_INC_PLAYERS_INPUT_H
 
-#include <string>
+#include <stdint.h>
 
-std::string InputPlayer();
+namespace RSP {
+namespace infrastructure {
+
+uint8_t InputPlayer();
+
+}
+}  // namespace RSP
 
 #endif  // MAIN_MANAGER_INFRASTRUCTURE_PLAYERS_INPUT_INC_PLAYERS_INPUT_H
