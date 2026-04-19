@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "(lldb) Launch Sample1", // このデバッグ設定の名前を指定
-            "type": "lldb",  // デバッグエンジンのタイプを指定: この場合、CodeLLDBを使用
+            "type": "lldb", // デバッグエンジンのタイプを指定: この場合、CodeLLDBを使用
             "request": "launch", // デバッグセッションのタイプを指定: "launch"は新しいプログラムの起動を意味
             "program": "${workspaceFolder}/build/src/sample1/Sample1", // デバッグするプログラムのパスを指定
             "args": [], // プログラムに渡す引数を指定
@@ -20,10 +20,10 @@
             "preLaunchTask": "CMake: Build Project"
         },
         {
-            "name": "(lldb) Launch Sample3", // [変更箇所] プロジェクト名
+            "name": "(lldb) Launch rockpaperscissors", // [変更箇所] プロジェクト名
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/src/sample3/Sample3", // [変更箇所] 実行ファイルパス
+            "program": "${workspaceFolder}/build/src/*", // [変更箇所] 実行ファイルパス
             "args": [],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "CMake: Build Project"
